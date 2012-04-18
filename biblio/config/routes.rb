@@ -1,4 +1,8 @@
 Biblio::Application.routes.draw do
+  resources :autors
+
+  get "prestamo/index"
+
   resources :libros
 
   get "say/hello"
@@ -55,6 +59,7 @@ Biblio::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
+  root :to => 'prestamo#index', :as => 'prestamo'
 
   # See how all your routes lay out with "rake routes"
 
